@@ -309,6 +309,8 @@ public interface ConcurrentMap<K,V> extends Map<K,V> {
      *         && (oldValue = map.putIfAbsent(key, newValue)) == null)
      *   ? newValue
      *   : oldValue;}</pre>
+     * When multiple threads attempt updates, map operations and the
+     * mapping function may be called multiple times.
      *
      * <p>This implementation assumes that the ConcurrentMap cannot contain null
      * values and {@code get()} returning null unambiguously means the key is
